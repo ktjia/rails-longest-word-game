@@ -1,0 +1,30 @@
+<!-- <h1>Games#score</h1>
+<p>Find me in app/views/games/score.html.erb</p>
+
+ -->
+<div class="wrapper-img">
+  <div class="container text-center">
+    <h1>Your result</h1>
+
+    <table class="score-table">
+      <thead>
+        <th>Your word</th>
+        <th>Time taken to answer</th>
+        <th>Translation</th>
+        <th>Your score</th>
+        <th>Message</th>
+      </thead>
+      <tbody>
+        <td><%= @result[:attempt]%></td>
+        <td><%= @result[:time]%>s</td>
+        <td><%= @result[:translation]%></td>
+        <td><%= @result[:score].round%></td>
+        <td><%= @result[:message]%></td>
+      </tbody>
+    </table>
+
+    <div class="row">
+      <%= link_to "Play again!", game_path %>
+    </div>
+  </div>
+</div>

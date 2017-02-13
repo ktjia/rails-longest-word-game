@@ -1,0 +1,26 @@
+<!-- <h1>Games#game</h1>
+<p>Find me in app/views/games/game.html.erb</p>
+ -->
+<div class="wrapper-img">
+  <div class="container text-center">
+    <h1>Welcome to the longest word-game</h1>
+    <p>Here is your grid: </p>
+
+      <table class="letter-table">
+        <tr>
+          <% @grid.each do |letter| %>
+            <td><%= letter %></td>
+          <% end %>
+        </tr>
+      </table>
+    <form action="/score">
+      <div class="form-group">
+        <label>Enter the longest word in the grid</label>
+        <input type="text" name="word" class="form-control">
+        <input type="hidden" name="start_time" class="form-control" value="<%= @start_time %>">
+        <input type="hidden" name="grid" class="form-control" value="<%= @grid %>">
+      </div>
+      <input type="submit" class="btn btn-primary btn-lg" value="Submit your word!">
+    </form>
+  </div>
+</div>
